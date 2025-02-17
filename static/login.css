@@ -1,0 +1,68 @@
+.body{
+    margin: 80px;
+}
+.register{
+    color:#981212;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #goToOtherPage{
+    background-color: #6e0404;
+    margin: 20px;
+  }
+ 
+#registration-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    color: #981212;
+    background-color: #cdb0b0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#registration-form label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+
+#registration-form input[type="text"],
+#registration-form input[type="number"],
+#registration-form input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+#registration-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #981212;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#error-message {
+    text-align: center;  
+    margin: 0 auto;   
+    color: #981212;  
+  }
+  

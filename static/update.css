@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    margin-top: 200px;
+}
+
+h2 {
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 20px;
+    /* Add space below for visual separation */
+}
+
+form {
+    width: 400px;
+    /* Set a reasonable width */
+    margin: 0 auto;
+    /* Center the form horizontally */
+    padding: 20px;
+    /* Add padding for content spacing */
+    border: 1px solid #ccc;
+    /* Add a subtle border */
+    border-radius: 5px;
+    /* Round corners for visual appeal */
+}
+
+label {
+    display: block;
+    /* Stack labels for better readability */
+    margin-bottom: 5px;
+    /* Add spacing below labels */
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    /* Expand input fields to full width */
+    padding: 8px;
+    /* Add padding for better appearance */
+    border: 1px solid #ccc;
+    /* Match border style with the form */
+    border-radius: 3px;
+    /* Round corners for input fields */
+    margin-bottom: 10px;
+    /* Add spacing between fields */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    /* Accent color for the submit button */
+    color: white;
+    /* Invert text color for visibility */
+    cursor: pointer;
+    /* Indicate interactivity on hover */
+}

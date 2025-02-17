@@ -1,0 +1,58 @@
+h1 {
+    text-align: center; 
+    color:#981212;
+  }
+table {
+    border-collapse: collapse;
+    /* Remove default table borders */
+    width: 100%;
+    /* Expand table to full width */
+    margin: 20px auto;
+    /* Add some margin for visual spacing */
+}
+
+th,
+td {
+    padding: 10px;
+    /* Add padding for better readability */
+    text-align: left;
+    /* Align content to the left */
+    border: 1px solid #ddd;
+    /* Add thin borders for separation */
+}
+
+th {
+    background-color: #f2f2f2;
+    /* Light gray background for headers */
+    font-weight: bold;
+    /* Make headers stand out */
+}
+
+/* Styling for action buttons */
+button {
+    border: none;
+    /* Remove default button borders */
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    /* Light gray background */
+    cursor: pointer;
+    /* Indicate clickable behavior */
+    border-radius: 3px;
+    /* Add slight rounding for aesthetics */
+}
+
+button:hover {
+    background-color: #413c3c;
+    /* Subtle color change on hover */
+}
+
+.update-button {
+    background-color: rgb(33, 111, 167);
+    color: white;
+}
+
+/* New CSS class for delete button */
+.delete-button {
+    background-color: rgb(197, 58, 88);
+    color: white;
+}

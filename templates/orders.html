@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='orders.css') }}"> </head>
+<body>
+    <h1>Food Order</h1>
+    <table id="food-table">
+        <thead>
+            <tr>
+                <th>Food Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in data['order'] %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1]}}</td>
+                
+            
+            {% endfor %}
+        </tbody>
+    </table>
+    <p id="total-price">Total: ₹ <span id="total-value">{{ data['tot'] }}</span></p><br><br>
+    <form id="paymentForm">
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod">
+          <option value="cash">Cash</option>
+          <option value="online">Online</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="submitPayment()">Submit</button>
+      </form>
+      <script>function submitPayment() {
+        const paymentMethod = document.getElementById("paymentMethod").value;
+      
+        // Simple validation (optional)
+        if (paymentMethod === "") {
+          alert("Please select a payment method.");
+          return;
+        }
+      
+        // Prevent default form submission behavior
+        event.preventDefault();
+      
+        // AJAX request to send data to app.py
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/app.py");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      
+        // Prepare form data (URL-encoded)
+        const formData = "paymentMethod=" + encodeURIComponent(paymentMethod);
+      
+        // Handle the response from app.py
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            alert("Ordered placed successfully! " );
+          } else {
+            alert("Error submitting payment: " + xhr.statusText);
+          }
+        };
+      
+        // Send the request
+        xhr.send(formData);
+      }
+    </script>      
+    <script src="{{ url_for('static', filename='orders.js') }}script.js"></script> </body>
+</html>

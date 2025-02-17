@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='manager.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/ordermanager" class="nav-item">Orders</a>
+        <a href="/transactions" class="nav-item">Transactions</a>
+        <a href="/inventory" class="nav-item">Inventory</a>
+    </nav>
+
+    <div id="content">
+        </div>
+
+    <script src="{{ url_for('static', filename='manager.js') }}"></script>
+</body>
+</html>

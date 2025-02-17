@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title class="register">Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <nav>
+           
+    <button id="goToOtherPage">Admin Login</button>
+    </nav>
+    <nav>
+    <h1 class="register">Register</h1>
+    <form id="registration-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="tableno">Table Number:</label>
+        <input type="number" id="tableno" name="tableno">
+        <br><br>
+        <label for="phn_no">Phone Number:</label>
+        <input type="tel" id="phn_no" name="phn_no">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="error-message"></p>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Table</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='ordermanager.css') }}">
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Order</th>
+        <th>Table no</th>
+        <th>Total</th>
+        <th>Payment Mode</th>
+        <th>Assign</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in data %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td><p style="color:#981212;"><b>{{ user[1] }}</b></p></td>
+                <td>{{ user[2] }}</td>
+                <td>{{ user[3] }}</td>
+                <td>{{ user[4] }}</td>
+                <td>{{ user[5] }}</td>
+                <td >{{ user[6] }}</td>
+                <td>
+                    <form action="{{ url_for('updatestatus', user_id=user[3]) }}" method="post">
+                        <button type="submit">Delivered</button>
+                    </form>
+                
+                    
+                    
+                
+                </td>
+            </tr>
+            <tr>
+            {% endfor %}
+      </tbody>
+  </table>
+  <script>
+    // Replace with script to dynamically populate table data
+  </script>
+</body>
+</html>

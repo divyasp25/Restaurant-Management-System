@@ -1,0 +1,63 @@
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.menu-card {
+    width: 25%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card h2 {
+    margin-bottom: 5px;
+}
+
+.add-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button.added {
+    background-color: #2ecc71;
+}
+/* ... other styles from previous examples ... */
+
+nav {
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+nav a {
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.sub {
+    background-color: #4CAF50;
+    color: white;
+    margin-top:-100px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.register{
+    color:#981212;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+}
